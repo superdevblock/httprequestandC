@@ -1,0 +1,11 @@
+language: csharp
+solution: src/HttUnicorn/HttUnicorn.sln
+mono: none
+dotnet: 2.1.502
+
+install:
+ - dotnet restore src/HttUnicorn
+
+script:
+ - dotnet build src/HttUnicorn/HttUnicorn/HttUnicorn.csproj
+ - dotnet test Tests/HttUnicorn.Tests/HttUnicorn.Tests.csproj
